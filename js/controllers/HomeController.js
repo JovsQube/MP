@@ -5,9 +5,9 @@ app.controller("HomeController", ['$scope', 'databaseService', 'firebaseService'
 
 	$scope.addAccount = function() {
 		console.log('clicked');
-		email = 'test03@test.com';
-		password = 'test03';
-		databaseService.addAccount('Test 3', email, password).then(function(result){
+		email = 'jovs.play01@gmail.com';
+		password = 'test04';
+		databaseService.addAccount('Test 4', email, password).then(function(result){
 			console.log('success', result);
 		}, function(error){
 			console.log('error', error);
@@ -29,12 +29,27 @@ app.controller("HomeController", ['$scope', 'databaseService', 'firebaseService'
 	};
 
 	$scope.validateAuth = function() {
-		console.log('validate auth');
-		firebaseService.authStateListener();
+
+		firebaseService.checkUser().then(function(){
+			console.log('has user');
+		}, function(error){
+			console.log(error);
+		});
 	};
 
 	$scope.logout = function() {
+
 		console.log('log out');
 		firebaseService.signOut();
 	};
+
+	$scope.emailVerification = function() {
+
+		firebaseService.checkUser().then(function(result){
+			console.log('result', result);
+			firebaseService.sendEmailVerification(result);
+		}, function(error){
+			console.log(error);
+		});
+	}
 }]);
