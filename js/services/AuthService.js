@@ -1,4 +1,4 @@
-app.service("AuthService", ['$q', function($q){
+app.service("authService", ['$q', function($q){
 	var self = this;
 
 	this.createAccount = function(email, password){

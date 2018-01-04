@@ -1,14 +1,14 @@
-app.service("databaseService", ['$q', 'AuthService', function($q, AuthService){
+app.service("databaseService", ['$q', 'authService', function($q, authService){
 	var self = this;
 	var accountRef = firebase.database().ref('accounts/');
 
 	this.addAccount = function(accountName, accountEmail, accountPassword) {
 		var deffered = $q.defer();
 
-		AuthService.createAccount(accountEmail, accountPassword).then(function(result){
+		authService.createAccount(accountEmail, accountPassword).then(function(result){
 			var account = {
 				account_name: accountName,
-				email: accountEmail.
+				email: accountEmail,
 				date_added: (new Date()).toString()
 			};
 

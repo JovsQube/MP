@@ -10,7 +10,7 @@ app.config(['$routeProvider', function ($routeProvider) {
   // Home
   .when("/", {
     templateUrl: "partials/home.html", 
-    controller: "PageCtrl"
+    controller: "HomeController"
   })
 
     // Pages
