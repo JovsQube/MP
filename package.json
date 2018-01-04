@@ -1,0 +1,24 @@
+{
+  "name": "ml-btc-market",
+  "version": "1.0.0",
+  "description": "An Angular Project",
+  "main": "app.js",
+  "dependencies": {
+    "angular": "^1.6.8",
+    "angularfire": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JovsQube/MP.git"
+  },
+  "author": "JovsQ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JovsQube/MP/issues"
+  },
+  "homepage": "https://github.com/JovsQube/MP#readme"
+}
